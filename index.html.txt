@@ -6,7 +6,18 @@
     <title>Special Birthday Website</title>
 </head>
 <body>
-    <h1>Welcome to our Special Journey</h1>
-    <!-- Add more content as you go along -->
+
+   <div id="minecraft-section">
+       <h2>Our Adventures in Minecraft</h2>
+       <p>Remember the time we built that epic castle together?</p>
+       <img src="minecraft-image.jpg" alt="Minecraft Memory">
+   </div>
+
+   <div id="genshin-section">
+       <h2>Our Journeys in Genshin Impact</h2>
+       <p>Exploring the vast world of Teyvat with you has been incredible.</p>
+       <img src="genshin-image.jpg" alt="Genshin Impact Memory">
+   </div>
+
 </body>
 </html>
