@@ -16,60 +16,81 @@
    <div id="minecraft-slideshow" class="game-slideshow">
        <div class="slide"><img src="minecraft-image1.jpg" alt="Minecraft Memory 1"></div>
        <div class="slide"><img src="minecraft-image2.jpg" alt="Minecraft Memory 2"></div>
+       <div class="slide"><img src="minecraft-image1.jpg" alt="Minecraft Memory 3"></div>
+       <div class="slide"><img src="minecraft-image1.jpg" alt="Minecraft Memory 4"></div>
+       <div class="slide"><img src="minecraft-image1.jpg" alt="Minecraft Memory 5"></div>
+       <div class="slide"><img src="minecraft-image1.jpg" alt="Minecraft Memory 6"></div>
        <!-- Add more slides as needed -->
    </div>
 
    <div id="genshin-slideshow" class="game-slideshow">
        <div class="slide"><img src="genshin-image1.jpg" alt="Genshin Impact Memory 1"></div>
        <div class="slide"><img src="genshin-image2.jpg" alt="Genshin Impact Memory 2"></div>
+       <div class="slide"><img src="genshin-image2.jpg" alt="Genshin Impact Memory 3"></div>
+       <div class="slide"><img src="genshin-image2.jpg" alt="Genshin Impact Memory 4"></div>
+       <div class="slide"><img src="genshin-image2.jpg" alt="Genshin Impact Memory 5"></div>
+       <div class="slide"><img src="genshin-image2.jpg" alt="Genshin Impact Memory 6"></div>
        <!-- Add more slides as needed -->
    </div>
 
     <!-- Add the Slick Carousel JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('#minecraft-slideshow').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                prevArrow: false,
-                nextArrow: false
-            });
-
-            $('#genshin-slideshow').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                prevArrow: false,
-                nextArrow: false
-            });
-
-            // Handle hover event on Minecraft dots
-            $('#minecraft-slideshow .slick-dots button').hover(function() {
-                // Get the index of the hovered dot
-                var dotIndex = $(this).parent().index();
-                
-                // Switch to the corresponding slide in Minecraft slideshow
-                $('#minecraft-slideshow').slick('slickGoTo', dotIndex);
-            });
-
-            // Handle hover event on Genshin dots
-            $('#genshin-slideshow .slick-dots button').hover(function() {
-                // Get the index of the hovered dot
-                var dotIndex = $(this).parent().index();
-                
-                // Switch to the corresponding slide in Genshin slideshow
-                $('#genshin-slideshow').slick('slickGoTo', dotIndex);
-            });
+<script>
+    $(document).ready(function(){
+        $('#minecraft-slideshow').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            prevArrow: false,
+            nextArrow: false
         });
-    </script>
+
+        $('#genshin-slideshow').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            prevArrow: false,
+            nextArrow: false
+        });
+
+        // Handle hover event on Minecraft dots
+        $('#minecraft-slideshow .slick-dots button').hover(function() {
+            // Remove the 'active' class from all dots
+            $('#minecraft-slideshow .slick-dots li').removeClass('active');
+            
+            // Get the index of the hovered dot
+            var dotIndex = $(this).parent().index();
+            
+            // Switch to the corresponding slide in Minecraft slideshow
+            $('#minecraft-slideshow').slick('slickGoTo', dotIndex);
+
+            // Add the 'active' class to the hovered dot
+            $(this).parent().addClass('active');
+        });
+
+        // Handle hover event on Genshin dots
+        $('#genshin-slideshow .slick-dots button').hover(function() {
+            // Remove the 'active' class from all dots
+            $('#genshin-slideshow .slick-dots li').removeClass('active');
+
+            // Get the index of the hovered dot
+            var dotIndex = $(this).parent().index();
+            
+            // Switch to the corresponding slide in Genshin slideshow
+            $('#genshin-slideshow').slick('slickGoTo', dotIndex);
+
+            // Add the 'active' class to the hovered dot
+            $(this).parent().addClass('active');
+        });
+    });
+</script>
+
 
 </body>
 </html>
