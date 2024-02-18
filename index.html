@@ -32,11 +32,41 @@
     <script>
         $(document).ready(function(){
             $('#minecraft-slideshow').slick({
-                // Set configuration options for Minecraft slideshow here
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                prevArrow: false,
+                nextArrow: false
             });
 
             $('#genshin-slideshow').slick({
-                // Set configuration options for Genshin Impact slideshow here
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                prevArrow: false,
+                nextArrow: false
+            });
+
+            // Handle hover event on Minecraft dots
+            $('#minecraft-slideshow .slick-dots button').hover(function() {
+                // Get the index of the hovered dot
+                var dotIndex = $(this).parent().index();
+                
+                // Switch to the corresponding slide in Minecraft slideshow
+                $('#minecraft-slideshow').slick('slickGoTo', dotIndex);
+            });
+
+            // Handle hover event on Genshin dots
+            $('#genshin-slideshow .slick-dots button').hover(function() {
+                // Get the index of the hovered dot
+                var dotIndex = $(this).parent().index();
+                
+                // Switch to the corresponding slide in Genshin slideshow
+                $('#genshin-slideshow').slick('slickGoTo', dotIndex);
             });
         });
     </script>
