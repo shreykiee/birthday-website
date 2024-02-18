@@ -1,34 +1,125 @@
 /* styles.css */
 
-/* Customize slick-dots styles */
-.slick-dots {
-    bottom: 20px;
+/* Override default Slick Carousel dot styles for Minecraft slideshow */
+#minecraft-slideshow .slick-dots {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.slick-dots li {
+#minecraft-slideshow .slick-dots li {
     margin: 0 5px;
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
 }
 
-.slick-dots li button {
-    font-size: 16px;
-    color: white;
-    background: #333;
-    border: 2px solid #555;
+#minecraft-slideshow .slick-dots li button {
+    font-size: 0; /* Hide the numbers */
+    color: transparent; /* Hide the numbers */
     border-radius: 50%;
     width: 16px;
     height: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
 }
 
-.slick-dots li.slick-active button {
-    background: #555;
+#minecraft-slideshow .slick-dots li:hover button {
+    transform: translateY(-5px) scale(1.1); /* Move up and increase size on hover */
 }
 
-/* Customize the container holding the slideshow */
-.game-slideshow {
-    max-width: 800px;
-    margin: auto;
+#minecraft-slideshow .slick-dots li.active button {
+    transform: translateY(-5px) scale(1.1); /* Move up and increase size for the active dot */
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(1) button {
+    background: #8ecae6; /* Set color for the first dot */
+    border: 1px solid #f1faee;
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(2) button {
+    background: #219ebc; /* Set color for the second dot */
+    border: 1px solid #f1faee;
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(3) button {
+    background: #fb8500 ; /* Set color for the third dot */
+    border: 1px solid #f1faee;
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(4) button {
+    background: #ffb703; /* Set color for the fourth dot */
+    border: 1px solid #f1faee;
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(5) button {
+    background: #023047; /* Set color for the fifth dot */
+    border: 1px solid #f1faee;
+}
+
+#minecraft-slideshow .slick-dots li:nth-child(6) button {
+    background: #283618; /* Set color for the sixth dot */
+    border: 1px solid #f1faee;
+}
+
+/* Override default Slick Carousel dot styles for Genshin slideshow */
+#genshin-slideshow .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#genshin-slideshow .slick-dots li {
+    margin: 0 5px;
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
+}
+
+#genshin-slideshow .slick-dots li button {
+    font-size: 0; /* Hide the numbers */
+    color: transparent; /* Hide the numbers */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
+}
+
+#genshin-slideshow .slick-dots li:hover button {
+    transform: translateY(-5px) scale(1.1); /* Move up and increase size on hover */
+}
+
+#genshin-slideshow .slick-dots li.active button {
+    transform: translateY(-5px) scale(1.1); /* Move up and increase size for the active dot */
+}
+
+#genshin-slideshow .slick-dots li:nth-child(1) button {
+    background: #8ecae6; /* Set color for the first dot */
+    border: 1px solid #f1faee;
+}
+
+#genshin-slideshow .slick-dots li:nth-child(2) button {
+    background: #219ebc; /* Set color for the second dot */
+    border: 1px solid #f1faee;
+}
+
+#genshin-slideshow .slick-dots li:nth-child(3) button {
+    background: #fb8500 ; /* Set color for the third dot */
+    border: 1px solid #f1faee;
+}
+
+#genshin-slideshow .slick-dots li:nth-child(4) button {
+    background: #ffb703; /* Set color for the fourth dot */
+    border: 1px solid #f1faee;
+}
+
+#genshin-slideshow .slick-dots li:nth-child(5) button {
+    background: #023047; /* Set color for the fifth dot */
+    border: 1px solid #f1faee;
+}
+
+#genshin-slideshow .slick-dots li:nth-child(6) button {
+    background: #283618; /* Set color for the sixth dot */
+    border: 1px solid #f1faee;
 }
