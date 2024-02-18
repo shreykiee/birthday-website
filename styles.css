@@ -51,6 +51,7 @@ body {
     height: 16px;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.82); /* Add a blurred shadow */
 }
 
 #minecraft-slideshow .slick-dots li:hover button {
@@ -113,6 +114,7 @@ body {
     height: 16px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s, border-color 0.2s; /* Add transition for smooth animation */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.82); /* Add a blurred shadow */
 }
 
 #genshin-slideshow .slick-dots li:hover button {
