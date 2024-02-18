@@ -1,6 +1,35 @@
 /* styles.css */
+/* background pattern*/
+
+
+@keyframes changeGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 200% 200%;
+    animation: changeGradient 10s infinite; 
+}
+
 
 /* Override default Slick Carousel dot styles for Minecraft slideshow */
+.game-slideshow {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
 #minecraft-slideshow .slick-dots {
     display: flex;
     justify-content: center;
@@ -73,7 +102,7 @@
 
 #genshin-slideshow .slick-dots li {
     margin: 0 5px;
-    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s; /* Add transition for smooth animation */
 }
 
 #genshin-slideshow .slick-dots li button {
@@ -83,7 +112,7 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; /* Add transition for smooth animation */
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s; /* Add transition for smooth animation */
 }
 
 #genshin-slideshow .slick-dots li:hover button {
@@ -123,3 +152,39 @@
     background: #283618; /* Set color for the sixth dot */
     border: 1px solid #f1faee;
 }
+
+/* styles.css */
+
+/* Reduce the overall width of the container */
+.game-slideshow {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* CARD */
+
+/* styles.css */
+
+.card {
+    border: 5px solid #edd8d8c4;
+    padding: 0px; /* Adjust padding to create space inside the card */
+    margin: 20px; /* Adjust margin to control space around the card */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a blurred shadow */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* Add this CSS to target the dots container and reduce its margin */
+.slick-dots {
+    margin-top: 30px; /* Adjust the margin to control the space above the dots */
+}  
